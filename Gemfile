@@ -6,15 +6,25 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
+# Notificações
+gem "gritter", :git => 'git://github.com/vmamaev/gritter.git'
+# Datagrid
+gem 'datagrid'
+#Paginação
+gem "kaminari"
+
 group :development, :test do
   gem 'byebug'
 end
+
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
+
 gem 'bootstrap-sass'
 gem 'simple_form'
+
 group :development do
   gem 'better_errors'
   gem 'guard-bundler'
@@ -29,6 +39,7 @@ group :development do
   gem 'spring-commands-rspec'
 end
 group :development, :test do
+  gem 'shoulda-matchers', require: false
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'pry-rails'
@@ -45,4 +56,5 @@ group :test do
   gem 'database_cleaner'
   gem 'launchy'
   gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
 end
