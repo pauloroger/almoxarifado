@@ -41,7 +41,7 @@ group :development do
   gem 'spring-commands-rspec'
 end
 group :development, :test do
-  gem 'shoulda-matchers', '~> 3.1', require: false
+  gem 'shoulda-matchers', require: false
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'pry-rails'

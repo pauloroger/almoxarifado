@@ -5,7 +5,18 @@ describe User do
 		expect(create(:user)).to be_valid
 	end
 
-	it { should validate_presence_of :login }
-	it { should have_secure_password }
+	context "validations" do
+
+		it { should validate_presence_of :login }
+		it { should validate_uniqueness_of :login }
+		it { should have_secure_password }
+
+	end
+	
+	context "relations" do
+
+		it { should have_many :stocks }
+
+	end
 
 end
