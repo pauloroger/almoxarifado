@@ -7,7 +7,20 @@ class UsersController < ApplicationController
   end
 
   def new
-  
+  	@user = User.new
+  end
+
+  def create
+  	@user = User.new users_params
+
+  	if @user.save
+      gflash :success => "Salvo com sucesso"
+      redirect_to users_path
+    else
+      gflash :now, :error => @user.errors.full_messages.join('<br>')
+      render 'new'
+    end
+
   end
 
   private

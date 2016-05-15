@@ -242,63 +242,15 @@ pt-BR:
     pm: ''
   activerecord:
     models:
-      banner:
-        one: "Banner"
-        other: "Banners"
-      tip:
-        one: "Dica"
-        other: "Dicas"
-      partner:
-        one: "Parceiro"
-        other: "Parceiros"
-      branch:
-        one: "Unidade"
-        other: "Unidades"
-      category:
-        one: "Categoria"
-        other: "Categorias"
-      service:
-        one: "Serviço"
-        other: "Serviços"
+      material:
+        one: "Material"
+        other: "Materiais"
+      user:
+        one: "Usuário"
+        other: "Usuários"
     attributes:
-      banner:
-        image: "Imagem"
-      tip:
-        title: "Título"
-        lead: "Chamada"
-        content: "Conteúdo"
-      partner:
+      material:
         name: "Nome"
-        lead: "Chamada"
-        content: "Conteúdo"
-      branch:
-        name: "Nome"
-        address: "Endereço"
-        phone: "Telefone"
-      category:
-        name: "Nome"
-      service:
-        name: "Nome"
-        category_id: "Subcategoria"
-      calendar:
-        man: "Homem"
-        woman: "Mulher"
-        child: "Criança"
-        premature: "Prematuro"
-        teen: "Adolescente"
-        pregnant: "Gestante"
-        elderly: "Idoso"
-        traveler: "Viajante"
-        all_ages: "0 a 100"
-  mail_form:
-    attributes:
-      contact:
-        name: "Nome"
-        subject: "Assunto"
-        message: "Mensagem"
-        phone: "Telefone"
-      expert:
-        name: "Nome"
-        technical_subject: "Assunto Técnico"
-        message: "Mensagem"
-        phone: "Telefone"
+      user:
+        login: "Login"
+        password: "Senha"

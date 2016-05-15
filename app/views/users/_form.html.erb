@@ -1,0 +1,21 @@
+<%= simple_form_for @user, defaults: { input_html: {class: 'form-control'}} do |f| %>
+
+  <div class="col-xs-6">
+
+  	<div class="form-group">
+      <label for="">Login*</label>
+      <%= f.input :login, label: false %>
+    </div>
+
+  	<div class="form-group">
+      <label for="">Senha*</label>
+      <%= f.input :password, label: false %>
+    </div>
+
+    <div class="form-group">
+    	<button type="submit" class="btn btn-primary pull-right">Salvar</button>
+    </div>
+
+  </div>
+
+<% end %>
