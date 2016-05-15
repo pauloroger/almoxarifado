@@ -13,4 +13,7 @@
  *= require_tree .
  *= require_self
  *= require gritter
+ *= require datagrid
  */
+
+ table.datagrid {width: 100%; margin-top: 20px;}
