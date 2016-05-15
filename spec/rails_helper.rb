@@ -44,6 +44,11 @@ RSpec.configure do |config|
     end
   end
 
+  Capybara.default_max_wait_time = 15
+
+  Faker::Config.locale = 'pt-BR'
+  config.include LoginMacros
+
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
