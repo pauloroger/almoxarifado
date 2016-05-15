@@ -3,7 +3,7 @@ module LoginMacros
 		visit new_session_path
 		fill_in 'login', with: login
 		fill_in 'password', with: pass
-		click_button 'Enviar'
+		click_button 'Entrar'
 		sleep 1
 	end
 

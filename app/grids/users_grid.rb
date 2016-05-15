@@ -7,6 +7,9 @@ class UsersGrid
 	end
 
 	column(:login, :header => "Usuários")
-	column(:created_at, :header => "Data de Cadastro")
+	column(:created_at, :header => "Data de Cadastro") do |model|
+		format(model.created_at.strftime("%d/%m/%Y - %H:%m:%S"))
+	end
+
 
 end
