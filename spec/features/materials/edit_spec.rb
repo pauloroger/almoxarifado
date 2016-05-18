@@ -26,6 +26,7 @@ feature "Edit Material", js: true do
   end 
 
   scenario 'invalid', js: true do
+
     visit edit_material_path material
 
     fill_in "material[name]", with: ""

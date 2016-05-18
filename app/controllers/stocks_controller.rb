@@ -27,14 +27,9 @@ class StocksController < ApplicationController
 
   def ValidateTotal(objStock)
 
-    #if action Outbound
-    if objStock.action
-      
-      #Validate total stock
-      if (objStock.totalAmount(@stock.material_id) - objStock.amount) < 0
-        return false
-      end
-
+    #Validate total stock
+    if (objStock.totalAmount(@stock.material_id) - objStock.amount) < 0
+      return false
     end
 
     return true

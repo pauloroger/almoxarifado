@@ -33,7 +33,7 @@ class MaterialsController < ApplicationController
 
   	if @material.save
       gflash :success => "Salvo com sucesso"
-      redirect_to materials_path
+      redirect_to root_path
     else
       gflash :now, :error => @material.errors.full_messages.join('<br>')
       render 'new'
@@ -83,6 +83,40 @@ class MaterialsController < ApplicationController
   def update
 
     @material = Material.find params[:id]
+
+    #List Material Log
+    @grid = StocksGrid.new(params[:stocks_grid])
+    
+    @grid.scope { |scope|
+      scope.where(:material_id => params[:id]).order(:created_at).page(params[:page])
+    }
+
+    @grid.column(:material_id, :header => "Material") do
+      if self.material
+        self.material.name
+      end
+    end
+
+    @grid.column(:user_id, :header => "Usuário") do
+      if self.user
+        self.user.login
+      end
+    end
+
+    @grid.column(:amount, :header => "Quantidade")
+
+    @grid.column(:action, :header => "Ação") do
+        if self.action = 0
+          "Entrada"
+        else
+          "Retirada"
+        end
+    end
+
+    @grid.column(:created_at, :header => "Data") do |model|
+      format(model.created_at.strftime("%d/%m/%Y - %H:%m:%S"))
+    end
+
 
     if @material.update materials_params
       gflash :success

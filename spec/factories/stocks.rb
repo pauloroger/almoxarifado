@@ -1,3 +1,5 @@
+require 'faker'
+
 FactoryGirl.define do
   factory :stock do
     amount 1
@@ -6,3 +8,5 @@ FactoryGirl.define do
     user nil
   end
 end
+
+

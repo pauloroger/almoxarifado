@@ -6,6 +6,7 @@ feature "List Materials" do
     login(user.login, user.password)
 
     visit materials_path
+    expect(page).to have_link "Movimentar" 
     expect(page).to have_link "Editar" 
     expect(page).to have_link "Excluir"
 	end
