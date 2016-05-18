@@ -10,4 +10,22 @@
 		<%= render 'form' %>
   </div>
 
+</br>
+</br>
+</br>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h4>Log de movimentações</h4>
+    </div>
+  </div>
+
+  <div class="row">
+		<div class="col-xs-12">
+			<%= datagrid_table @grid %>
+			<%= paginate(@grid.assets) %>
+		</div>
+	</div>
+
+
 </div>

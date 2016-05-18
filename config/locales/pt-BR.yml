@@ -248,9 +248,14 @@ pt-BR:
       user:
         one: "Usuário"
         other: "Usuários"
+      stock:
+        one: "Estoque"
+        other: "Estoques"
     attributes:
       material:
         name: "Nome"
       user:
         login: "Login"
         password: "Senha"
+      stock:
+        amount: "Quantidade"

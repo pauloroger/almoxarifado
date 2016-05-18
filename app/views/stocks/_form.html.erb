@@ -1,0 +1,27 @@
+<%= simple_form_for @stock, defaults: { input_html: {class: 'form-control'}} do |f| %>
+	
+  <%= hidden_field_tag "stock[material_id]", params[:mat_id] %>
+  <%= hidden_field_tag "stock[user_id]", @current_user.id %>
+  <br>
+  <div class="col-xs-6">
+
+  	<div class="form-group">
+      <label for="">Ação</label></br>
+      <%= f.label :action, "Entrada", :value => "false"  %>
+      <%= f.radio_button :action, false, :checked => true%>
+      <%= f.label :action, "Retirada", :value => "true" %>
+      <%= f.radio_button :action, true %>
+    </div>
+
+    <div class="form-group">
+      <label for="">Quantidade</label>
+      <%= f.input :amount, label: false %>
+    </div>
+
+    <div class="form-group">
+    	<button type="submit" class="btn btn-primary pull-right">Salvar</button>
+    </div>
+
+  </div>
+
+<% end %>
