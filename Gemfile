@@ -15,7 +15,7 @@ gem 'datagrid'
 #Paginação
 gem "kaminari"
 #Password Hash
-gem 'bcrypt-ruby'
+gem 'bcrypt'
 
 group :development, :test do
   gem 'byebug'
